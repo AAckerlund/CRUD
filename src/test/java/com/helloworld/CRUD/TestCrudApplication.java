@@ -1,4 +1,4 @@
-package com.example.HelloWorld;
+package com.helloworld.CRUD;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
@@ -8,7 +8,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
 @TestConfiguration(proxyBeanMethods = false)
-public class TestHelloWorldApplication {
+public class TestCrudApplication {
 
 	@Bean
 	@ServiceConnection
@@ -17,7 +17,7 @@ public class TestHelloWorldApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.from(HelloWorldApplication::main).with(TestHelloWorldApplication.class).run(args);
+		SpringApplication.from(CrudApplication::main).with(TestCrudApplication.class).run(args);
 	}
 
 }

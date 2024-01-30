@@ -36,5 +36,4 @@ out/
 ### VS Code ###
 .vscode/
 
-dremio-jdbc-driver-24.3.2-202401241821100032-d2d8a497.jar
 dremio-cloud-tools/

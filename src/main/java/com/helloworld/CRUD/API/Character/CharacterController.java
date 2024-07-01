@@ -5,6 +5,20 @@ import com.helloworld.CRUD.Character.Character;
 
 @RestController
 public class CharacterController {
+    @GetMapping("/example")
+    public String example(
+            @RequestBody String body,//points to the body of the api call
+
+            @RequestParam(value = "p1", required = false) String p1,//points to the specified url param
+            @RequestParam(required = false) String p2,//points to the specified url param (note the 2 different ways to declare these)
+
+            @RequestHeader(value = "h1", required = false) String h1,//points to the specified header
+            @RequestHeader(required = false) String h2//points to the specified header (note the 2 different ways to declare these)
+
+    ) {
+        return "example";
+    }
+
     @PutMapping("/new-character/{id}")//Create
     public String postCharacter(
             @PathVariable("id") String id,
